@@ -1,0 +1,10 @@
+10:35:34 **** Build of configuration Debug for project Blinklight ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+make: *** [main.o] Error 66048
+Command canceled
+
+10:35:55 Build Cancelled. (took 21s.126ms)
+

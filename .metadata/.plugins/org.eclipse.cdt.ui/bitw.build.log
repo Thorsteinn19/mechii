@@ -1,0 +1,20 @@
+17:31:20 **** Incremental Build of configuration Debug for project bitw ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 bitw.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    1646 bytes (10.0% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:31:20 Build Finished. 0 errors, 0 warnings. (took 131ms)
+

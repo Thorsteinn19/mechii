@@ -1,0 +1,20 @@
+17:51:10 **** Incremental Build of configuration Debug for project HW3 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p HW3.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     200 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:51:10 Build Finished. 0 errors, 0 warnings. (took 133ms)
+

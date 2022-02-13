@@ -1,0 +1,11 @@
+17:41:22 **** Incremental Build of configuration Debug for project bitflip ****
+make all 
+Building file: ../bitwise.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"bitwise.d" -MT"bitwise.o" -o "bitwise.o" "../bitwise.c"
+/usr/bin/sh: gcc: command not found
+make: *** [bitwise.o] Error 127
+"make all" terminated with exit code 2. Build might be incomplete.
+
+17:41:22 Build Failed. 2 errors, 0 warnings. (took 135ms)
+

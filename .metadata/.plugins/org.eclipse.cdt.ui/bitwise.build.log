@@ -1,0 +1,20 @@
+16:49:58 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:49:58 Build Finished. 0 errors, 0 warnings. (took 80ms)
+

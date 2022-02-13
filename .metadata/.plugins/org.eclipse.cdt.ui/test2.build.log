@@ -1,0 +1,10 @@
+10:48:23 **** Build of configuration Release for project test2 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+make: *** [main.o] Error 66048
+Command canceled
+
+10:50:50 Build Cancelled. (took 2m:27s.80ms)
+

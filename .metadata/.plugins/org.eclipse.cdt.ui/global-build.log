@@ -1,0 +1,3629 @@
+14:50:51 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:50:51 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:50:52 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:50:52 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5560 bytes (17.0% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:51:41 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:51:41 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:51:41 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:51:42 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building file: ../PWMSERVO/servo.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/servo.d" -MT"PWMSERVO/servo.o" -c -o "PWMSERVO/servo.o" "../PWMSERVO/servo.c"
+Finished building: ../PWMSERVO/servo.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5550 bytes (16.9% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:51:42 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:53:11 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:53:12 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:53:12 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:53:13 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5512 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:53:13 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:55:21 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:55:21 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:55:22 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:55:22 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building file: ../PWMSERVO/servo.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/servo.d" -MT"PWMSERVO/servo.o" -c -o "PWMSERVO/servo.o" "../PWMSERVO/servo.c"
+Finished building: ../PWMSERVO/servo.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5508 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:55:23 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:58:12 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:58:12 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:58:13 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:58:13 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building file: ../PWMSERVO/servo.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/servo.d" -MT"PWMSERVO/servo.o" -c -o "PWMSERVO/servo.o" "../PWMSERVO/servo.c"
+Finished building: ../PWMSERVO/servo.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5494 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:58:14 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:59:27 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:59:27 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:59:28 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:59:28 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5496 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:59:29 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:01:04 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:01:04 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:01:04 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:01:05 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:01:05 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:06 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:06 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:06 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:07 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:07 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:03:32 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:03:32 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:03:32 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:03:33 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:03:33 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:37 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:37 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:38 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:38 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:39 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:56 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:56 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:57 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:57 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:05:57 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:12:38 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:12:38 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:12:39 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:12:39 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building file: ../PWMSERVO/servo.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/servo.d" -MT"PWMSERVO/servo.o" -c -o "PWMSERVO/servo.o" "../PWMSERVO/servo.c"
+Finished building: ../PWMSERVO/servo.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:12:40 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:30 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:31 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:31 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:32 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5500 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:32 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:52 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:53 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:53 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:53 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5500 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        268 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:14:54 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:22:37 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:22:37 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:22:38 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:22:38 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building file: ../PWMSERVO/servo.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/servo.d" -MT"PWMSERVO/servo.o" -c -o "PWMSERVO/servo.o" "../PWMSERVO/servo.c"
+Finished building: ../PWMSERVO/servo.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5518 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:22:39 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:34 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:34 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:35 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:35 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5500 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:36 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:58 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:58 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:59 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:24:59 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/serial.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/serial.d" -MT"PWMSERVO/serial.o" -c -o "PWMSERVO/serial.o" "../PWMSERVO/serial.c"
+Finished building: ../PWMSERVO/serial.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5510 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:25:00 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:27:56 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:27:56 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:27:56 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:27:57 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5516 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:27:57 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:28:57 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:28:57 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:28:57 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:28:58 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5494 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:28:58 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:35:04 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:35:04 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:35:05 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:35:05 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5496 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:35:06 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:17:47 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:17:47 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:17:48 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:17:48 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/servo.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/servo.d" -MT"PWMSERVO/servo.o" -c -o "PWMSERVO/servo.o" "../PWMSERVO/servo.c"
+Finished building: ../PWMSERVO/servo.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5488 bytes (16.7% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:17:49 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:48:39 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:48:39 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:48:40 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:48:40 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../PWMSERVO/servo.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"PWMSERVO/servo.d" -MT"PWMSERVO/servo.o" -c -o "PWMSERVO/servo.o" "../PWMSERVO/servo.c"
+Finished building: ../PWMSERVO/servo.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5492 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:48:41 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:49:56 **** Incremental Build of configuration Debug for project LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     142 bytes (0.4% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:49:56 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:49:57 **** Incremental Build of configuration Release for project Homework ****
+make all 
+Building file: ../function/flash.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "../function/flash.c"
+Finished building: ../function/flash.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Homework.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Homework.map -mmcu=atmega328p -o "Homework.elf"  ./function/flash.o  ./main.o   
+Finished building target: Homework.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Homework.elf  >"Homework.lss"
+Finished building: Homework.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Homework.elf  "Homework.hex"
+Finished building: Homework.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Homework.elf  "Homework.eep"
+Finished building: Homework.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Homework.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     194 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:49:57 **** Incremental Build of configuration Debug for project Motordrive ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Motordrive.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
+Finished building target: Motordrive.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
+Finished building: Motordrive.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
+Finished building: Motordrive.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Motordrive.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5498 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:        269 bytes (13.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:49:58 **** Incremental Build of configuration Debug for project bitwise ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p bitwise.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    1804 bytes (5.5% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

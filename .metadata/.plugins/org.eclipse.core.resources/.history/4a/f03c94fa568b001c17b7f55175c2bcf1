@@ -1,0 +1,50 @@
+/*
+ * main.c
+ *
+ *  Created on: 31 Jan 2022
+ *      Author: stein
+ */
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include "PWMSERVO/delay.h"
+#include "PWMSERVO/serial.h"
+#include "PWMSERVO/servo.h"
+
+
+int main(){
+	Init_Uart();
+	servo1_init();
+	sei();
+	DDRD=(1<<PORTD6);
+	while (1){
+		PORTD=(1<<PORTD6);
+		delay_s(1);
+		PORTD=0;
+		delay_s(1);
+	}
+
+	while (1) // Loop forever
+	{
+//	      while ((UCSR0A & (1 << RXC0)) == 0) {}; // Do nothing until data have been received and is ready to be read from UDR
+//	      char ReceivedByte = UDR0; // Fetch the received byte value into the variable "ByteReceived"
+//	      if (ReceivedByte == 'l'){
+//	      servoduty1=0;
+//	      }
+//	      else if (ReceivedByte == 'm'){
+//	    	  servoduty1=40;
+//	      }
+//	      else if (ReceivedByte == 'h'){
+//	    	  servoduty1=99;
+//	      }
+//	      else if (ReceivedByte == 'o'){
+//	    	  servo1_init();
+//	      }
+//	      else servoduty1 += 1;
+//	      while ((UCSR0A & (1 << UDRE0)) == 0) {}; // Do nothing until UDR is ready for more data to be written to it
+//	      UDR0 = ReceivedByte; // Echo back the received byte back to the computer
+	   }
+
+return 0;
+}
+

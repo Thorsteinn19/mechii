@@ -1,0 +1,59 @@
+/*
+ * serial.c
+ *
+ *  Created on: 10 Feb 2022
+ *      Author: stein
+ */
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+#include "serial.h"
+#include "delay.h"
+#include "servo.h"
+
+
+#define BUAD 9600
+#define BRC ((F_CPU/16/BUAD)-1)
+char cRx;
+
+void Init_Uart(){
+
+
+	UBRR0H=(BRC>>8);
+	UBRR0L= BRC;
+
+	UCSR0B= (1<<RXEN0)| (1<<RXCIE0)|(1<<TXEN0)|(1<<TXCIE0);
+
+//    UCSR0C =
+        /* no parity bit */
+   //     (0 << UPM01) |
+   //     (0 << UPM00) |
+        /* asyncrounous USART */
+    //    (0 << UMSEL01) |
+    //    (0 << UMSEL00) |
+        /* one stop bit */
+   //     (0 << USBS0) |
+        /* 8-bits of data */
+   //    (1 << UCSZ01) |
+   //     (1 << UCSZ00);
+//	UBRR0H=0;
+//	UBRR0L = 16;
+	UCSR0B=(1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0);
+	UCSR0C=(1<<USBS0)|(3<<UCSZ00);
+	sei();
+}
+
+ISR(USART_RX_vect){
+
+	cRx=UDR0;
+
+	UDR0=cRx; //echo the signal back
+	setservocycle(cRx);
+}
+
+
+
+
+
+
