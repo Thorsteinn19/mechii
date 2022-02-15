@@ -1,4 +1,4 @@
-16:49:56 **** Incremental Build of configuration Debug for project LED ****
+20:55:13 **** Incremental Build of configuration Debug for project LED ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega328p LED.elf
@@ -16,5 +16,5 @@ Data:          0 bytes (0.0% Full)
 Finished building: sizedummy
  
 
-16:49:56 Build Finished. 0 errors, 0 warnings. (took 81ms)
+20:55:13 Build Finished. 0 errors, 0 warnings. (took 132ms)
 

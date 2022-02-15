@@ -12,6 +12,12 @@
 extern volatile char cRx;
 extern char serialin;
 void Init_Uart();
+void printhexbyte(char inputchar);
+char nibbletohexvalue(char nibblebyte);
+void printint(int inputint);
+void printlong(long inputlong);
+void chartoascii(char data);
+void writestring(char string[]);
 ISR(USART_RX_vect);
 
 

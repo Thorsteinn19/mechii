@@ -1,4 +1,4 @@
-16:49:58 **** Incremental Build of configuration Debug for project bitwise ****
+20:55:14 **** Incremental Build of configuration Debug for project bitwise ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega328p bitwise.elf
@@ -16,5 +16,5 @@ Data:         10 bytes (0.5% Full)
 Finished building: sizedummy
  
 
-16:49:58 Build Finished. 0 errors, 0 warnings. (took 80ms)
+20:55:15 Build Finished. 0 errors, 0 warnings. (took 133ms)
 

@@ -10,7 +10,7 @@
 #include "servo.h"
 
 volatile char servoduty1;
-char servoduty2;
+volatile char servoduty2;
 char dccommand;
 
 void servo1_init(){
@@ -36,9 +36,7 @@ void servo2_init(){
 
 	OCR0B = (servoduty2/100.0)*255;
 
-	sei();
-
-	TCCR0B|=(1<<CS00);
+	TCCR0B|=0x05;
 }
 
 ISR(TIMER0_OVF_vect){

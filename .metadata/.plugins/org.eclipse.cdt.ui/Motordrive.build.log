@@ -1,4 +1,4 @@
-16:49:57 **** Incremental Build of configuration Debug for project Motordrive ****
+20:55:14 **** Incremental Build of configuration Debug for project Motordrive ****
 make all 
 Building file: ../main.c
 Invoking: AVR Compiler
@@ -24,15 +24,15 @@ AVR Memory Usage
 ----------------
 Device: atmega328p
 
-Program:    5498 bytes (16.8% Full)
+Program:    6738 bytes (20.6% Full)
 (.text + .data + .bootloader)
 
-Data:        269 bytes (13.1% Full)
+Data:        285 bytes (13.9% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-16:49:58 Build Finished. 0 errors, 0 warnings. (took 334ms)
+20:55:14 Build Finished. 0 errors, 0 warnings. (took 386ms)
 

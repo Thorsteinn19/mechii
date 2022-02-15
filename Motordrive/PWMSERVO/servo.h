@@ -9,6 +9,7 @@
 #define PWMSERVO_SERVO_H_
 
 extern volatile char servoduty1;
+extern volatile char servoduty2;
 extern char dccommand;
 
 void servo1_init();

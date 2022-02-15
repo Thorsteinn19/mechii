@@ -14,15 +14,22 @@
 
 int main(){
 	Init_Uart();
-	servo1_init();
 	sei();
-	cRx=0x6D;
-	serialin=48;
-
+ char test=250;
 	while (1) // Loop forever
 	{
+		chartoascii(test);
+		printhexbyte(test);
+		delay_ms(2);
+		UDR0=0x0D;
+		delay_ms(2);
+		UDR0=0x0A;
+		delay_ms(2);
 
-		servoduty1=serialin-48;
+		delay_s(1);
+		test++;
+
+		writestring("Snilldin ein \n");
 	}
 
 return 0;

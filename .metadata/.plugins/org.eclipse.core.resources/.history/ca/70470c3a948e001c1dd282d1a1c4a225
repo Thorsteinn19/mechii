@@ -1,0 +1,32 @@
+/*
+ * main.c
+ *
+ *  Created on: 31 Jan 2022
+ *      Author: stein
+ */
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include "PWMSERVO/delay.h"
+#include "PWMSERVO/serial.h"
+#include "PWMSERVO/servo.h"
+
+
+int main(){
+	Init_Uart();
+	sei();
+	long test = 10000003;
+	while (1) // Loop forever
+	{
+
+		printlong(test);
+		UDR0=0x0D;
+		delay_s(1);
+		UDR0=' ';
+		printhexbyte(char 13);
+		chartoascii(char 13);
+	}
+
+return 0;
+}
+

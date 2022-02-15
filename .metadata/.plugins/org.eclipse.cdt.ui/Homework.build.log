@@ -1,4 +1,4 @@
-16:49:57 **** Incremental Build of configuration Release for project Homework ****
+20:55:14 **** Incremental Build of configuration Release for project Homework ****
 make all 
 Building file: ../function/flash.c
 Invoking: AVR Compiler
@@ -43,5 +43,5 @@ Data:          0 bytes (0.0% Full)
 Finished building: sizedummy
  
 
-16:49:57 Build Finished. 0 errors, 0 warnings. (took 385ms)
+20:55:14 Build Finished. 0 errors, 0 warnings. (took 436ms)
 
