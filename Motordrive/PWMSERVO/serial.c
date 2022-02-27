@@ -10,6 +10,7 @@
 
 #include "serial.h"
 #include "delay.h"
+#include "pwm.h"
 
 volatile char cRx;
 char serialin;
@@ -119,6 +120,8 @@ void chartoascii(char data){
 	}
 }
 
+
+
 void writestring(char string[]){
 	for(int i=0;string[i] !='\0';++i){
 		UDR0=string[i];
@@ -129,8 +132,10 @@ void writestring(char string[]){
 ISR(USART_RX_vect){
 
 	cRx=UDR0;
-	serialin=cRx;
-	UDR0=cRx;
+	if (cRx=='d'){
+		chartoascii(pwmduty1);
+	}
+
 }
 
 

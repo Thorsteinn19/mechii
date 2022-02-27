@@ -59,7 +59,7 @@ all: main-build
 main-build: Motordrive.elf secondary-outputs
 
 dependents:
-	-cd C:/Users/stein/Documents/Eclipsews/Homework/Release && $(MAKE) all
+	-cd C:/Users/stein/Documents/Eclipsews/Homework/Release && $(MAKE) clean all
 
 # Tool invocations
 Motordrive.elf: $(OBJS) $(USER_OBJS) C:/Users/stein/Documents/Eclipsews/Homework/Release/Homework.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)

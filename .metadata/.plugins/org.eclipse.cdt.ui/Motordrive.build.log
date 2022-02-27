@@ -1,38 +1,12 @@
-20:55:14 **** Incremental Build of configuration Debug for project Motordrive ****
+16:08:36 **** Incremental Build of configuration Debug for project Motordrive ****
 make all 
-Building file: ../main.c
+Building file: C:/Users/stein/Documents/Eclipsews/Homework/function/flash.c
 Invoking: AVR Compiler
-avr-gcc -I"C:\Users\stein\Documents\Eclipsews\Homework" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Motordrive.elf
-Invoking: AVR C Linker
-avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf"  ./function/flash.o  ./PWMSERVO/delay.o ./PWMSERVO/serial.o ./PWMSERVO/servo.o  ./main.o   
-Finished building target: Motordrive.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S Motordrive.elf  >"Motordrive.lss"
-Finished building: Motordrive.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motordrive.elf  "Motordrive.hex"
-Finished building: Motordrive.hex
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega328p Motordrive.elf
-AVR Memory Usage
-----------------
-Device: atmega328p
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"function/flash.d" -MT"function/flash.o" -c -o "function/flash.o" "C:/Users/stein/Documents/Eclipsews/Homework/function/flash.c"
+AllocationBase 0x0, BaseAddress 0x71540000, RegionSize 0x20000, State 0x10000
+C:\WinAVR-20100110\utils\bin\sh.exe: *** Couldn't reserve space for cygwin's heap, Win32 error 0
+make: *** [function/flash.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
 
-Program:    6738 bytes (20.6% Full)
-(.text + .data + .bootloader)
-
-Data:        285 bytes (13.9% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-
-20:55:14 Build Finished. 0 errors, 0 warnings. (took 386ms)
+16:08:36 Build Failed. 1 errors, 0 warnings. (took 209ms)
 

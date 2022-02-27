@@ -8,28 +8,35 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "PWMSERVO/delay.h"
+#include "PWMSERVO/pwm.h"
 #include "PWMSERVO/serial.h"
-#include "PWMSERVO/servo.h"
 
 
 int main(){
 	Init_Uart();
+	pwmall_init();
 	sei();
- char test=250;
+ char test=0;
 	while (1) // Loop forever
 	{
 		chartoascii(test);
-		printhexbyte(test);
-		delay_ms(2);
+		writestring("\n");
 		UDR0=0x0D;
-		delay_ms(2);
-		UDR0=0x0A;
-		delay_ms(2);
-
+		printhexbyte(test);
+		writestring("\n");
+		UDR0=0x0D;
+		printint(test);
+		writestring("\n");
+		UDR0=0x0D;
+		printlong(test);
+		writestring("\n");
+		UDR0=0x0D;
+		writestring("Snilldin ein \n");
+		UDR0=0x0D;
+		writestring("\n");
+		UDR0=0x0D;
 		delay_s(1);
 		test++;
-
-		writestring("Snilldin ein \n");
 	}
 
 return 0;

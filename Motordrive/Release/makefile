@@ -8,6 +8,13 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include function/subdir.mk
+-include PWMSERVO/subdir.mk
+-include Homework/function/subdir.mk
+-include Homework/Release/function/subdir.mk
+-include Homework/Release/subdir.mk
+-include Homework/Debug/subdir.mk
+-include Homework/subdir.mk
 -include subdir.mk
 -include objects.mk
 

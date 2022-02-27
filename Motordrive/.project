@@ -3,7 +3,6 @@
 	<name>Motordrive</name>
 	<comment></comment>
 	<projects>
-		<project>Homework</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
