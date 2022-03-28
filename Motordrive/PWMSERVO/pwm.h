@@ -12,9 +12,10 @@ extern volatile char pwmduty1;
 extern volatile char pwmduty2;
 extern volatile char pwmduty3;
 extern volatile char pwmduty4;
-extern volatile char pwmduty5;
-extern volatile char pwmduty6;
 
+#define PWM_TOP (39999u)
+#define SERVO_MIN (999u)
+#define SERVO_MX (4999u)
 
 void pwm1_init();
 void pwm2_init();
@@ -23,5 +24,15 @@ void pwm4_init();
 void pwm5_init();
 void pwm6_init();
 void pwmall_init();
-
+void servo_set(unsigned int deg, unsigned int max_deg);
+void servo2_set(unsigned int deg,unsigned int max_deg);
+void pwm1off();
+void pwm2off();
+void pwm3off();
+void pwm4off();
+void pwm1on();
+void pwm2on();
+void pwm3on();
+void pwm4on();
+void pwmalloff();
 #endif /* PWMSERVO_SERVO_H_ */

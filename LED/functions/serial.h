@@ -9,7 +9,7 @@
 #define UART_SERIAL_H_
 
 
-extern volatile char cRx[];
+extern volatile char cRx[10];
 extern char serialin;
 void Init_Uart();
 void printhexbyte(char inputchar);
@@ -18,6 +18,7 @@ void printint(int inputint);
 void printlong(long inputlong);
 void chartoascii(char data);
 void writestring(char string[]);
+void floattoascii(float datain);
 ISR(USART_RX_vect);
 
 

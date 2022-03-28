@@ -8,12 +8,14 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
+#include "drive.h"
 #include "serial.h"
 #include "delay.h"
 #include "pwm.h"
 
-volatile char cRx;
-char serialin;
+volatile char cRx[10];
+volatile int charcounter;
+
 
 void Init_Uart(){
 	UBRR0H=0;
@@ -21,6 +23,10 @@ void Init_Uart(){
 	UCSR0B=(1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0);
 	UCSR0C=(1<<USBS0)|(3<<UCSZ00);
 
+	for(int i=0;i<10;i++){
+		cRx[i]='0';
+	}
+	cRx[10]='\0';
 }
 
 char nibbletohexvalue( char nibblebyte){
@@ -119,6 +125,60 @@ void chartoascii(char data){
 		UDR0=0x30+single;
 	}
 }
+void floattoascii(float datain){
+	char asciichar;
+	if((0<=datain) &&(datain<10)){
+		char single=datain;
+		char tenth=(datain-single)*10;
+		char hundreth=(datain-single-tenth/10.0)*100;
+		asciichar=single+0x30;
+		UDR0=asciichar;
+		delay_ms(1);
+		writestring(".");
+		asciichar=tenth+0x30;
+		UDR0=asciichar;
+		delay_ms(1);
+		asciichar=hundreth+0x30;
+		UDR0=asciichar;
+		delay_ms(1);
+	}
+	else if((10<=datain)&&(datain<100)){
+		char tens=(datain/10);
+		char single=datain-10*tens;
+		char tenth=(datain-single-10*tens)*10;
+//		char hundreth=(datain-single-10*tens-tenth/10.0)*100;
+		UDR0=0x30+tens;
+		delay_ms(1);
+		UDR0=0x30+single;
+		delay_ms(1);
+		writestring(".");
+		asciichar=tenth+0x30;
+		UDR0=asciichar;
+	}
+	else if((100<=datain) && (datain<1000)){
+		char hundreds = datain/100;
+		char tens=(datain-100*hundreds)/10;
+		char single=datain-100*hundreds-10*tens;
+		UDR0=0x30+hundreds;
+		delay_ms(1);
+		UDR0=0x30+tens;
+		delay_ms(1);
+		UDR0=0x30+single;
+	}
+	else if((1000<=datain)&&(datain<10000)){
+		char thousands= datain/1000;
+		char hundreds=(datain-1000*thousands)/100;
+		char tens=(datain-1000*thousands-100*hundreds)/10;
+		char single=datain-1000*thousands-100*hundreds-10*tens;
+		UDR0=0x30+thousands;
+		delay_ms(1);
+		UDR0=0x30+hundreds;
+		delay_ms(1);
+		UDR0=0x30+tens;
+		delay_ms(1);
+		UDR0=0x30+single;
+	}
+}
 
 
 
@@ -131,10 +191,17 @@ void writestring(char string[]){
 
 ISR(USART_RX_vect){
 
-	cRx=UDR0;
-	if (cRx=='d'){
-		chartoascii(pwmduty1);
+	cRx[charcounter]=UDR0;
+
+	if (cRx[charcounter]=='\n' || charcounter>9){
+		actionfunction(cRx);
+		for(int i=0;i<10;i++){
+			cRx[i]='0';
+		}
+		cRx[10]='\0';
+		charcounter=0;
 	}
+	else charcounter++;
 
 }
 

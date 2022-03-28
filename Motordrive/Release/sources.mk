@@ -27,6 +27,5 @@ Homework/Release \
 Homework/function \
 Homework \
 PWMSERVO \
-function \
 . \
 

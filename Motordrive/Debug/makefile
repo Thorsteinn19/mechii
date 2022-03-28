@@ -8,7 +8,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include function/subdir.mk
 -include PWMSERVO/subdir.mk
 -include subdir.mk
 -include objects.mk
@@ -58,11 +57,8 @@ all: main-build
 # Main-build Target
 main-build: Motordrive.elf secondary-outputs
 
-dependents:
-	-cd C:/Users/stein/Documents/Eclipsews/Homework/Release && $(MAKE) clean all
-
 # Tool invocations
-Motordrive.elf: $(OBJS) $(USER_OBJS) C:/Users/stein/Documents/Eclipsews/Homework/Release/Homework.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
+Motordrive.elf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
 	avr-gcc -Wl,-Map,Motordrive.map -mmcu=atmega328p -o "Motordrive.elf" $(OBJS) $(USER_OBJS) $(LIBS)
@@ -95,6 +91,5 @@ clean:
 secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY)
 
 .PHONY: all clean dependents main-build
-C:/Users/stein/Documents/Eclipsews/Homework/Release/Homework.elf:
 
 -include ../makefile.targets

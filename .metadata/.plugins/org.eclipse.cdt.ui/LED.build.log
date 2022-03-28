@@ -1,4 +1,4 @@
-16:08:35 **** Incremental Build of configuration Debug for project LED ****
+16:45:42 **** Incremental Build of configuration Debug for project LED ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega328p LED.elf
@@ -6,15 +6,15 @@ AVR Memory Usage
 ----------------
 Device: atmega328p
 
-Program:     142 bytes (0.4% Full)
+Program:    8226 bytes (25.1% Full)
 (.text + .data + .bootloader)
 
-Data:          0 bytes (0.0% Full)
+Data:        367 bytes (17.9% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-16:08:35 Build Finished. 0 errors, 0 warnings. (took 211ms)
+16:45:42 Build Finished. 0 errors, 0 warnings. (took 218ms)
 
