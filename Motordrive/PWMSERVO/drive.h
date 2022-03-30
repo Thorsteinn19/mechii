@@ -13,7 +13,7 @@ extern volatile char sweepbool;
 extern volatile unsigned int angle1;
 extern volatile unsigned int angle2;
 void actionfunction(char chararray[]);
-
+long averagefunc(long valuelist[10]);
 
 
 

@@ -1,4 +1,4 @@
-16:45:43 **** Incremental Build of configuration Debug for project Motordrive ****
+13:38:08 **** Incremental Build of configuration Debug for project Motordrive ****
 make all 
 Building file: ../PWMSERVO/encoder.c
 Invoking: AVR Compiler
@@ -24,15 +24,15 @@ AVR Memory Usage
 ----------------
 Device: atmega328p
 
-Program:   11482 bytes (35.0% Full)
+Program:   11974 bytes (36.5% Full)
 (.text + .data + .bootloader)
 
-Data:        324 bytes (15.8% Full)
+Data:        432 bytes (21.1% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-16:45:43 Build Finished. 0 errors, 0 warnings. (took 815ms)
+13:38:08 Build Finished. 0 errors, 0 warnings. (took 550ms)
 

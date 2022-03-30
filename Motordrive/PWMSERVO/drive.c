@@ -38,17 +38,16 @@ void actionfunction(char chararray[]){
 	else if (chararray[0]=='n'){
 		if (chararray[1]=='2'){
 			angle1 = 100*(chararray[2]-0x30)+10*(chararray[3]-0x30)+(chararray[4]-0x30);
-			chartoascii(angle1);
+
 		}
 		else if (chararray[1]=='1'){
 			angle2 = 100*(chararray[2]-0x30)+10*(chararray[3]-0x30)+(chararray[4]-0x30);
-			chartoascii(angle2);
-			writestring("servosuccess");
+
 
 			}
 		else if (chararray[1]=='s'){
 			sweepbool=chararray[2]-0x30;
-			writestring("servosuccess");
+
 		}
 	}
 	else if (chararray[0]=='w'){
@@ -81,15 +80,32 @@ void actionfunction(char chararray[]){
 		pwm3on();
 	}
 	else if (chararray[0]=='p'){
+		long timediff1=averagefunc(movave);
+		long timediff=averagefunc(movave2);
+		writestring("dir1: ");
 		chartoascii(dir1);
-		writestring("\n");
+		writestring("\nTime: ");
 		floattoascii(timediff1*0.0159375);
-		writestring("\n");
+		writestring("\ndir2: ");
 		chartoascii(dir0);
-		writestring("\n");
+		writestring("\nTime: ");
 		floattoascii(timediff*0.0159375);
-		writestring("\n");
-
+		writestring("\ndcspeed: ");
+		chartoascii(dcspeed);
+		writestring("\nAngle1: ");
+		chartoascii(angle1);
+		writestring("\nAngle1: ");
+		chartoascii(angle2);
+		writestring("\n\n");
 	}
 
 }
+
+long averagefunc(long valuelist[10]){
+	long sumvalue=0;
+	for (char i=0;i<10;i++){
+		sumvalue=sumvalue+valuelist[i];
+	}
+	return sumvalue/10;
+}
+

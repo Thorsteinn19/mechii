@@ -11,9 +11,9 @@
 extern char dir1;
 extern char dir0;
 extern long clockcount;
-extern long timediff;
 extern long clockcount1;
-extern long timediff1;
+extern long movave[10];
+extern long movave2[10];
 
 void encoder1init();
 void encoder0init();
