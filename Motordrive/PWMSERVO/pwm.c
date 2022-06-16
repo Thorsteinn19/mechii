@@ -16,7 +16,7 @@ volatile char pwmduty2;
 volatile char pwmduty3;
 volatile char pwmduty4;
 
-
+//Initalizing all pwm signals
 void pwmall_init(){
 	pwm1_init();
 	pwm2_init();
@@ -29,7 +29,7 @@ void pwmall_init(){
 }
 
 void pwm1_init(){
-	//works - Digitalpin 6
+	//Digitalpin 6
 	DDRD |= (1<<PORTD6);
 	TCCR0A|=(1<<COM0A1)| (1<<WGM00)|(1<<WGM01); // Setup fastpwm with Clear OC0A on compare match and set at bottom
 
@@ -40,7 +40,7 @@ void pwm1_init(){
 }
 
 void pwm2_init(){
-//digitalpin 5
+//Digitalpin 5
 	DDRD |= (1<<PORTD5);
 	TCCR0A|=(1<<COM0B1)| (1<<WGM00)|(1<<WGM01);
 

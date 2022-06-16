@@ -13,8 +13,11 @@ extern volatile char pwmduty2;
 extern volatile char pwmduty3;
 extern volatile char pwmduty4;
 
+// Period of servo signal 20.000 microseconds
 #define PWM_TOP (39999u)
+// Minimum on time for servo 500 microseconds
 #define SERVO_MIN (999u)
+// Maximum on time for servo 2500 microseconds
 #define SERVO_MX (4999u)
 
 void pwm1_init();
